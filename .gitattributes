@@ -1,1 +1,2 @@
 oauth2-authorization-server/src/main/resources* linguist-vendored
+oauth2-authorization-server/src/main/webapp/resources* linguist-vendored
