@@ -1,4 +1,4 @@
--- noinspection SqlNoDataSourceInspectionForFile
+		-- noinspection SqlNoDataSourceInspectionForFile
 
 INSERT INTO authority  VALUES(1,'ROLE_OAUTH_ADMIN');
 INSERT INTO authority VALUES(2,'ROLE_RESOURCE_ADMIN');

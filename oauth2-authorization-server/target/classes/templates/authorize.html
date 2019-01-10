@@ -1,0 +1,18 @@
+<html>
+<head>
+</head>
+<body>
+    <div class="container">
+        <h2>Please Confirm</h2>
+        <p>
+            Do you really authorize "${authorizationRequest.clientId}" to access your protected resources?.
+        </p>
+        <form id="confirmationForm" name="confirmationForm" action="/oauth/authorize" method="post">
+		<input name='user_oauth_approval' value='true' type='hidden'/>
+		<input type="hidden"  name="${_csrf.parameterName}" value="${_csrf.token}"/>
+            <input name="scope.openid" value="true" type="checkbox" /> OpenID<br>
+            <label><input name='authorize' value='Authorize' type='submit'/>
+        </form>
+    </div>
+</body>
+</html>

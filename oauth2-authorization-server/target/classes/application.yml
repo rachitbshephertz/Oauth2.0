@@ -1,12 +1,18 @@
 server:
-  port: 8081
-
+  port: 8443
+  ssl:
+     enabled: true
+     key-store-type: PKCS12
+     key-alias: tomcat
+     key-store-password: chelsea
+     key-store: "D:/rachit/spring-boot-security-oauth2-jdbc-master/oauth2-authorization-server/src/main/resources/keystore.p12"
+  
 oauth2:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     jdbc-url: jdbc:mysql://localhost:3306/oauth2?createDatabaseIfNotExist=true
     username: root
-    password: 
+    password:
 
 spring:
   jpa:
@@ -17,4 +23,3 @@ spring:
       connection-test-query: SELECT 1 FROM DUAL
       minimum-idle: 1
       maximum-pool-size: 5
-    initialization-mode: always
